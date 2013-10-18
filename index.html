@@ -1,20 +1,17 @@
----
-layout: base
----
-<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
+<!-- @include header -->
+<div class="blog-cover" style="background-image:url(images/blog-cover.jpg);">
     
     <section>
         <div class="container">
-            <h1>{{ site.inc.title }}</h1>
-            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
+            <h1 data-barley="site_index_title" data-barley-editor="mini">Company Blog Title</h1>
+            <h3 data-barley="site_index_subtitle" data-barley-editor="simple">News, stories, office party photos, and more</h3>
         
-            {% if site.inc.twitter %}
-            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
-            {% endif %}
-            {% if site.inc.facebook %}
-            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
-            {% endif %}
-            <a href="/feed.xml" title="RSS Feed">
+            <div style="display:inline;" data-barley="site_index_social_header" data-barley-editor="advanced">
+                <a href="https://twitter.com/getbarley" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+                
+                <a href="http://facebook.com/getbarley" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+            </div>
+            <a href="/feed" title="RSS Feed">
                 <i class="icon icon-rss"></i>
             </a>
         </div>
@@ -23,32 +20,37 @@ layout: base
 
 
 <article class="container">
-{% for post in paginator.posts %}
-  {% unless post.draft %}
+    <!-- repeat:blogpost:10 -->
     <section class="index">
-        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
         <div>
-            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
+            <h2 class="title"><a href="%URL%" rel="prefetch">%TITLE%</a></h2>
+            %EXCERPT%
+
+            <p><a href="%URL%">Read the rest of this post</a>...</p>
             <div class="meta">
-                Written By <address>{{ post.author.name }}</a> &mdash;
-                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+                Written By <address>%AUTHOR%</a> &mdash;
+                <time pubdate datetime="%PUBLISHED_ON%" title="%PUBLISHED_ON%">%PUBLISHED_ON%</time>
             </div>
         </div>
         <hr>
     </section>
-    {% endunless %}
-    {% endfor %}
+    <!-- endrepeat -->
+
+    <!-- default_message:blogpost -->
+    <section class="index">
+    <div><p>No blog posts have been published yet.</p></div>
+    </section>
+    <!-- enddefault_message -->
+
     <section class="pagination" style="text-align:center">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">‹ Newer</a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
-        {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
-      {% endif %}
+      
+        <!-- next -->
+        <a href="#" class="btn btn-outline">‹ Newer</a>
+        <!-- endnext -->
+
+        <!-- previous -->     
+        <a href="#" class="btn btn-outline">Older ›</a>
+        <!-- endprevious -->
     </section>
 </article>
+<!-- @include footer -->

@@ -1,38 +1,20 @@
-# Jekyll Incorporated
-Modern Jekyll based blog. Great for companies, products or anything. See live at [blog.sendtoinc.com](http://blog.sendtoinc.com)
+# Barley Incorporated
+A fork of [Jekyll Incorporated by Kippt](http://incorporated.sendtoinc.com/). See live at [preview-incorporated.getbarley.com](http://preview-incorporated.getbarley.com)
 
 ## Installation & Usage
-    bundle install
-    jekyll serve --watch
-
-_Note: Requires Ruby version 1.9.3 =>. For example use [rbenv](https://github.com/sstephenson/rbenv)_   
-    
-## Configuration
-Edit: _config.yml (general options), main.css (theme colors &amp; fonts)
-
-```
-jekyll-incorporated/
-├── _config.yml
-├── _assets/
-    ├── stylesheets/
-        ├── main.scss
-```
-
-_Note: when editing _config.yml, you need to restart jekyll to see the changes.__
-
-    
-## Publish to Github Pages
-1. Add your domain to _CNAME_
-2. Edit your repo address at _Rakefile_
-    
-Run rake task. **NOTE: It will deploy the generated site to _gh-pages_ branch overwriting it**    
-``` 
-rake site:publish
-```
+    Go to Barley. Sign up. Use!
+    Or, download the HTML source for yourself.   
 
 ## Authors
 
-Originally build for [sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge
+Ported to Barley by:
+**Colin Devroe**
++ [http://twitter.com/cdevroe](http://twitter.com/cdevroe)
++ [http://github.com/cdevroe](http://github.com/cdevroe)
+
+----
+
+Originally built for [sendtoinc.com](https://sendtoinc.com), your workspace for sharing and organizing knowledge
 
 **Karri Saarinen**
 
@@ -46,9 +28,7 @@ Originally build for [sendtoinc.com](https://sendtoinc.com), your workspace for 
 
 ## Todo:
 
-+ Documentation
-+ Less config files
-+ Better deploy scripts
++ 
 
 ## Copyright and license
 

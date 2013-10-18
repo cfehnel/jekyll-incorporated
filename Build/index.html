@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barley Incorporated</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='stylesheets/main.css'>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+       
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <div style="display:inline;" data-barley="site_logo" data-barley-editor="image">
+            <a class="current brand" href="index.html">
+                <img src="images/logo.png" alt="Company Name">
+            </a>
+            </div>
+            <a href="index.html" class="current home">Blog</a>
+            <a href="product.html">Product</a>
+            <a href="about.html">About</a>
+        </nav>
+        <nav class="tagline">
+            <span data-barley="product_tagline" data-barley-editor="mini">Product Name, your tagline goes here.</span>
+            <div style="display:inline;" data-barley="product_link" data-barley-editor="link">
+                <a href="http://getbarley.com/" class="btn btn-outline">Learn More</a>
+            </div>
+        </nav>
+    </header>
+</section>
+<div class="blog-cover" style="background-image:url(images/blog-cover.jpg);">
+    
+    <section>
+        <div class="container">
+            <h1 data-barley="site_index_title" data-barley-editor="mini">Company Blog Title</h1>
+            <h3 data-barley="site_index_subtitle" data-barley-editor="simple">News, stories, office party photos, and more</h3>
+        
+            <div style="display:inline;" data-barley="site_index_social_header" data-barley-editor="advanced">
+                <a href="https://twitter.com/getbarley" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+                
+                <a href="http://facebook.com/getbarley" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+            </div>
+            <a href="/feed" title="RSS Feed">
+                <i class="icon icon-rss"></i>
+            </a>
+        </div>
+    </section>
+</div>
+
+
+<article class="container">
+    <!-- repeat:blogpost:10 -->
+    <section class="index">
+        <div>
+            <h2 class="title"><a href="%URL%" rel="prefetch">%TITLE%</a></h2>
+            %EXCERPT%
+
+            <p><a href="%URL%">Read the rest of this post</a>...</p>
+            <div class="meta">
+                Written By <address>%AUTHOR%</a> &mdash;
+                <time pubdate datetime="%PUBLISHED_ON%" title="%PUBLISHED_ON%">%PUBLISHED_ON%</time>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <!-- endrepeat -->
+
+    <!-- default_message:blogpost -->
+    <section class="index">
+    <div><p>No blog posts have been published yet.</p></div>
+    </section>
+    <!-- enddefault_message -->
+
+    <section class="pagination" style="text-align:center">
+      
+        <!-- next -->
+        <a href="#" class="btn btn-outline">‹ Newer</a>
+        <!-- endnext -->
+
+        <!-- previous -->     
+        <a href="#" class="btn btn-outline">Older ›</a>
+        <!-- endprevious -->
+    </section>
+</article>
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2013
+        
+        <nav>
+            <a href="http://plainmade.com/">Your Company Name</a> &middot;
+            <a class='current' href="index.html">Blog</a> &middot;
+            <a href="product.html">Product</a> &middot; 
+            <a href="about.html">About</a>
+        </nav>
+        
+        <nav class="social">
+            <div style="display:inline;" data-barley="site_index_social_footer" data-barley-editor="advanced">
+                <a href="https://twitter.com/getbarley" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+                
+                <a href="http://facebook.com/getbarley" title="Like on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+            </div>
+            <a href="/feed" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a> &amp; <a href="http://getbarley.com/">Barley</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src='javascripts/main.js'></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+</body>
+</html>
